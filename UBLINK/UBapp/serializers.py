@@ -7,6 +7,11 @@ class PersonSerializer(serializers.ModelSerializer):
         model = Person
         fields = '__all__'
 
+class PersonSpentTotal(serializers.ModelSerializer):
+    class Meta:
+        model = Person
+        fields = ('amount')
+
 
 class SpentSerializer(serializers.ModelSerializer):
     class Meta:
